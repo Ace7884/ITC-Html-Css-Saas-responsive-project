@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: lime;
+  width: 100vw;
+  padding: 10px;
+  
+}
+
+.page_warpper ,sidebar , header,.Content_Container{
+display:flex;
+
+}
+
+body,.page_warpper,header, .Content_Container{
+  flex-direction: row;
+
+}
+
+sidebar ,main ,.sidebar_setting{
+  flex-direction: column;
+}
+
+main{
+  background-color:blue;
+  padding:20px;
+}
+
+sidebar {
+  background-color:red;
+}
+
+.Content_Container{
+  background-color: grey;
+  padding:20px;
+}
+
+header , .sidebar_setting{
+  justify-content: space-between;
+}
+
+.sidebar_setting{
+  height: 40vh;
+  background-color:orange;
+}
+
+ul {
+  list-style:none;
+}
