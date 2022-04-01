@@ -8,7 +8,7 @@
     <title>SaaS Kit</title>
   </head>
   <body> 
-    <div class="page_warpper">
+    <div class="page_warp">
       <sidebar>
         <!-- side bar dissapears when mobile -->
         <sidebar-header>
@@ -16,27 +16,27 @@
         </sidebar-header>
         <div>
           <!-- Img possibly use icon instead or add two divs for img and description -->
-          <img>
+          <img src="./Resources/Sierra_profile_photo.svg">
           <h2>Sierra Ferguson</h2>
           <p>s.ferguson@gmail.com</p>
           <!-- a elements h2 size -->
-          <icon><a>Dashboard</a></icon> 
-          <icon><a>Tasks</a></icon>   
-          <icon><a>Email</a></icon> 
-          <icon><a>Contacts</a></icon> 
-          <icon><a>Chat</a></icon> 
-          <icon><a>Deals</a></icon> 
+          <img src="./Resources/dashboard_icon.svg"><a>Dashboard</a>
+          <img src="./Resources/tasks_icon.svg"><a>Tasks</a> 
+          <img src="./Resources/email_icon.svg"><a>Email</a> 
+          <img src="./Resources/contacts_icon.svg"><a>Contacts</a>
+          <img src="./Resources/chat_icon.svg"><a>Chat</a>
+          <img src="./Resources/deals_icon.svg"><a>Deals</a>
         </div>
         <div class="sidebar_setting">
-          <icon><a>Settings</a></icon> 
+          <img src="./Resources/settings_icon.svg"><a>Settings</a>
           <!-- potentionally switch to a icon p element -->
-          <icon><button>Toggle Sidebar</button></icon>
+          <img src="./Resources/toggle_icon.svg"><button>Toggle Sidebar</button>
         </div>
       </sidebar>
       <header>
       <!-- potentionally switch to a icon and p element instead -->
         <input placeholder="Global search">
-        <button><icon>Wazzz</icon></button>
+        <button><img src="./Resources/searchbar_notifications_icon.svg"></button>
       </header>
       <div class = "Content_Container">
         <main>
@@ -68,7 +68,7 @@
             <h2>Send benefit review by Sunday</h2>
             <span><h3>Reminder</h3></span>
             <h3>Due date:December 23,2018</h3>
-            <img>
+            <img src="./Resources/George_photo.svg">
             <h3>George Fields</h3>
             <indicator><h3>Completed</h3></indicator>
           </card>
@@ -76,25 +76,30 @@
             <h2>Invite to office meet-up</h2>
             <span><h3>call</h3></span>
             <h3>Due date:December 23,2018</h3>
-            <img>
+            <img src="./Resources/Rebecca_photo.svg">
             <h3>Rebecca Moore</h3>
-            <icon><button></button></icon>
-            <icon><button></button></icon>
+            <img src="./Resources/curser_hand.svg">
+            <img src="./Resources/edit_icon.svg"><button></button>
+            <img src="./Resources/delete_icon.svg"><button></button>
             <indicator>Ended</indicator>
           </card>
           <card>
             <h2>Office meet-up</h2>
             <span><h3>Event</h3></span>
             <h3>Due date:December 23,2018</h3>
-            <img>
+            <img src="./Resources/Lindsey_photo.svg">
             <h3>Lindsey Stroud</h3>
             <indicator>Completed</indicator>
           </card>
           <button><h2>Show more</h2></button>
         </main>
         <section>
-          <chart></chart>
-          <chart></chart>
+          <div class ="chart">
+            <h2>Deals</h2>
+          </div>
+          <div class ="chart">
+            <h2>Tasks</h2>
+          </div>
         </section>
       </div>
     </div>

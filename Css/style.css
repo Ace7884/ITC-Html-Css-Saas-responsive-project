@@ -4,14 +4,9 @@
   padding: 0;
 }
 
-header{
-  background-color: lime;
-  width: 100vw;
-  padding: 10px;
-  
-}
 
-.page_warpper ,sidebar , header,.Content_Container{
+
+section ,sidebar , chart,.page_warp,.Content_Container {
 display:flex;
 
 }
@@ -21,7 +16,7 @@ body,.page_warpper,header, .Content_Container{
 
 }
 
-sidebar ,main ,.sidebar_setting{
+main , section, sidebar , chart ,.sidebar_setting{
   flex-direction: column;
 }
 
@@ -39,7 +34,7 @@ sidebar {
   padding:20px;
 }
 
-header , .sidebar_setting{
+header , section ,.sidebar_setting{
   justify-content: space-between;
 }
 
@@ -48,6 +43,19 @@ header , .sidebar_setting{
   background-color:orange;
 }
 
+header{
+  background-color: lime;
+  padding: 10px;
+  
+}
+
 ul {
   list-style:none;
+}
+
+chart{
+
+  size: 30vw ,30vh;
+  background-color:lightblue;
+  margin:30px;
 }
