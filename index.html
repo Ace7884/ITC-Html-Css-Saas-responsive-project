@@ -1,107 +1,101 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./Css/style.css" rel="stylesheet" >
+    <link href="./Css/style.css" rel="stylesheet" />
     <title>SaaS Kit</title>
   </head>
-  <body> 
-    <div class="page_warp">
-      <sidebar>
-        <!-- side bar dissapears when mobile -->
-        <sidebar-header>
-          <h1>SaaS Kit</h1> 
-        </sidebar-header>
-        <div>
-          <!-- Img possibly use icon instead or add two divs for img and description -->
-          <img src="./Resources/Sierra_profile_photo.svg">
-          <h2>Sierra Ferguson</h2>
-          <p>s.ferguson@gmail.com</p>
-          <!-- a elements h2 size -->
-          <img src="./Resources/dashboard_icon.svg"><a>Dashboard</a>
-          <img src="./Resources/tasks_icon.svg"><a>Tasks</a> 
-          <img src="./Resources/email_icon.svg"><a>Email</a> 
-          <img src="./Resources/contacts_icon.svg"><a>Contacts</a>
-          <img src="./Resources/chat_icon.svg"><a>Chat</a>
-          <img src="./Resources/deals_icon.svg"><a>Deals</a>
-        </div>
-        <div class="sidebar_setting">
-          <img src="./Resources/settings_icon.svg"><a>Settings</a>
-          <!-- potentionally switch to a icon p element -->
-          <img src="./Resources/toggle_icon.svg"><button>Toggle Sidebar</button>
-        </div>
-      </sidebar>
-      <header>
-      <!-- potentionally switch to a icon and p element instead -->
-        <input placeholder="Global search">
-        <button><img src="./Resources/searchbar_notifications_icon.svg"></button>
-      </header>
-      <div class = "Content_Container">
-        <main>
-          <h3>8 task completed out of 10</h3>
-          <h3>show:<input placeholder="This week"></h3>
-          <br id="meter">
-          <h2>23 December,Sunday</h2>
-          <!-- ul element dissapear when mobile -->
-          <ul>
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-          </ul>
-          <ul>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-          </ul>
-          <br>
-          <card>
-            <h2>Send benefit review by Sunday</h2>
-            <span><h3>Reminder</h3></span>
-            <h3>Due date:December 23,2018</h3>
-            <img src="./Resources/George_photo.svg">
-            <h3>George Fields</h3>
-            <indicator><h3>Completed</h3></indicator>
-          </card>
-          <card>
-            <h2>Invite to office meet-up</h2>
-            <span><h3>call</h3></span>
-            <h3>Due date:December 23,2018</h3>
-            <img src="./Resources/Rebecca_photo.svg">
-            <h3>Rebecca Moore</h3>
-            <img src="./Resources/curser_hand.svg">
-            <img src="./Resources/edit_icon.svg"><button></button>
-            <img src="./Resources/delete_icon.svg"><button></button>
-            <indicator>Ended</indicator>
-          </card>
-          <card>
-            <h2>Office meet-up</h2>
-            <span><h3>Event</h3></span>
-            <h3>Due date:December 23,2018</h3>
-            <img src="./Resources/Lindsey_photo.svg">
-            <h3>Lindsey Stroud</h3>
-            <indicator>Completed</indicator>
-          </card>
-          <button><h2>Show more</h2></button>
-        </main>
-        <section>
-          <div class ="chart">
-            <h2>Deals</h2>
-          </div>
-          <div class ="chart">
-            <h2>Tasks</h2>
-          </div>
-        </section>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- potentionally switch to a icon and p element instead -->
+        <span><img src="./Resources/header_search_icon.svg"><h4>Global Search</h4></span>
+        <button>
+          <img src="./Resources/searchbar_notifications_icon.svg" />
+        </button>
       </div>
+      <!-- side bar dissapears when mobile -->
+      <nav class="sidebar">
+        <h1>SaaS Kit</h1>
+        <!-- Img possibly use icon instead or add two divs for img and description -->
+        <img src="./Resources/Sierra_profile_photo.svg" />
+        <h2>Sierra Ferguson</h2>
+        <p>s.ferguson@gmail.com</p>
+        <!-- a elements h2 size -->
+        <img src="./Resources/dashboard_icon.svg" /><a>Dashboard</a>
+        <img src="./Resources/tasks_icon.svg" /><a>Tasks</a>
+        <img src="./Resources/email_icon.svg" /><a>Email</a>
+        <img src="./Resources/contacts_icon.svg" /><a>Contacts</a>
+        <img src="./Resources/chat_icon.svg" /><a>Chat</a>
+        <img src="./Resources/deals_icon.svg" /><a>Deals</a>
+        <img src="./Resources/settings_icon.svg" /><a>Settings</a>
+        <!-- potentionally switch to a icon p element -->
+        <img src="./Resources/toggle_icon.svg" /><button>Toggle Sidebar</button>
+      </nav>
+      <div class="content">
+        <h4>8 task completed out of 10</h4>
+        <h4>show:<input placeholder="This week" /></h4>
+        <br id="meter" />
+        <h2>23 December,Sunday</h2>
+        <!-- ul element dissapear when mobile -->
+        <ul>
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+        </ul>
+        <br />
+        <card>
+          <h2>Send benefit review by Sunday</h2>
+          <span><h4>Reminder</h4></span>
+          <h3>Due date:December 23,2018</h3>
+          <img src="./Resources/George_photo.svg" />
+          <h4>George Fields</h4>
+          <indicator><h4>Completed</h4></indicator>
+        </card>
+        <card>
+          <h2>Invite to office meet-up</h2>
+          <span><h4>call</h4></span>
+          <h4>Due date:December 23,2018</h4>
+          <img src="./Resources/Rebecca_photo.svg" />
+          <h4>Rebecca Moore</h4>
+          <img src="./Resources/curser_hand.svg" />6
+          <img src="./Resources/edit_icon.svg" /><button></button>
+          <img src="./Resources/delete_icon.svg" /><button></button>
+          <indicator>Ended</indicator>
+        </card>
+        <card>
+          <h2>Office meet-up</h2>
+          <span><h4>Event</h4></span>
+          <h4>Due date:December 23,2018</h4>
+          <img src="./Resources/Lindsey_photo.svg" />
+          <h4>Lindsey Stroud</h4>
+          <indicator>Completed</indicator>
+        </card>
+        <button><h2>Show more</h2></button>
+      </div>
+      <section class="deals_Chart">
+        <h4>deals chart</h4>
+        <!-- <img src="/Resources/deals_chart_graphic.svg" /> -->
+      </section>
+      <section class="tasks_Graphic">
+        <h4>tasks graphic</h4>
+        <!-- <img src="/Resources/tasks_graphic.svg" /> -->
+      </section>
     </div>
   </body>
 </html>

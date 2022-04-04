@@ -5,57 +5,85 @@
 }
 
 
-
-section ,sidebar , chart,.page_warp,.Content_Container {
-display:flex;
-
+.container{
+  display:grid;
+  grid-template-columns: 256px repeat(4 ,1fr); 
+  grid-template-rows: 60px repeat( 4, 1fr); 
+  column-gap:36px;
+  row-gap: 35px;
+  grid-template-areas:
+  "sidebar header header header header"
+  "sidebar content   content   deals_Chart deals_Chart"
+  "sidebar content   content   deals_Chart deals_Chart"
+  "sidebar content   content   tasks_Graphic tasks_Graphic"
+  "sidebar content   content   tasks_Graphic tasks_Graphic";
+  background-color: grey;
 }
 
-body,.page_warpper,header, .Content_Container{
+.header , .sideba ,span{
+  display: flex;
+}
+
+.header , span {
   flex-direction: row;
-
 }
 
-main , section, sidebar , chart ,.sidebar_setting{
+.sidebar{
   flex-direction: column;
 }
 
-main{
-  background-color:blue;
-  padding:20px;
-}
-
-sidebar {
+.sidebar {
+  grid-area: sidebar;
   background-color:red;
+ 
 }
-
-.Content_Container{
-  background-color: grey;
-  padding:20px;
-}
-
-header , section ,.sidebar_setting{
+  
+.header{
+  grid-area: header;
   justify-content: space-between;
-}
-
-.sidebar_setting{
-  height: 40vh;
-  background-color:orange;
-}
-
-header{
+  align-items: center;
+  padding: 20px 36px;
+  margin-left:-36px;
   background-color: lime;
-  padding: 10px;
+  
+  
+}
+.content{
+  grid-area: content;
+  background-color:blue;
   
 }
 
+.deals_Chart ,.tasks_Graphic{
+  margin-right: 38px;
+}
+
+.content , .tasks_Graphic{
+  margin-bottom:36px;
+}
+.deals_Chart{
+  grid-area: deals_Chart;
+  border: 5px black solid;
+}
+
+.tasks_Graphic{
+  grid-area:tasks_Graphic;
+  border: 5px black solid;
+
+}
+
 ul {
+  display: flex;
+  flex-direction: row;
   list-style:none;
 }
 
-chart{
+img{
+  width: 20px;
+}
+@media (max-width: 375px){
 
-  size: 30vw ,30vh;
-  background-color:lightblue;
-  margin:30px;
+  ul , sidebar {
+    display:none
+  }
 }
