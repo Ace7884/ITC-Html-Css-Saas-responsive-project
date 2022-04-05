@@ -4,86 +4,167 @@
   padding: 0;
 }
 
-
-.container{
-  display:grid;
-  grid-template-columns: 256px repeat(4 ,1fr); 
-  grid-template-rows: 60px repeat( 4, 1fr); 
-  column-gap:36px;
-  row-gap: 35px;
-  grid-template-areas:
-  "sidebar header header header header"
-  "sidebar content   content   deals_Chart deals_Chart"
-  "sidebar content   content   deals_Chart deals_Chart"
-  "sidebar content   content   tasks_Graphic tasks_Graphic"
-  "sidebar content   content   tasks_Graphic tasks_Graphic";
-  background-color: grey;
+html,body,.container{
+  height: 100%;
+}
+.container , ul{
+  display: grid; 
 }
 
-.header , .sideba ,span{
+
+.page_header, .sidebar, .header ,.profile, .content,.calender ,.card,.text , .chart_container ,.middle_Card , span, ul {
   display: flex;
 }
 
-.header , span {
+.page_header, .header, .profile, .chart_container ,.middle_Card  ,span, ul {
   flex-direction: row;
 }
 
-.sidebar{
+.sidebar ,.proflie_Text ,.content,.calender,.card ,.text {
   flex-direction: column;
+}
+.chart_container, .text {
+  justify-content: center;
+}
+
+
+.container {
+  grid-template-columns:256px repeat(4, 1fr);
+  grid-template-rows: 60px repeat(5, 1fr);
+  column-gap: 35px;
+  row-gap: 36px;
+  grid-template-areas:
+    "sidebar page_header page_header page_header    page_header"
+    "sidebar content     content     deals_Chart    deals_Chart"
+    "sidebar content     content     deals_Chart    deals_Chart"
+    "sidebar content     content     tasks_Graphic  tasks_Graphic"
+    "sidebar content     content     tasks_Graphic  tasks_Graphic";
+  background-color:#f5f3f3;
+ 
+}
+
+
+.content {
+  grid-area: content;
+  width: 635px;
+  height:718px;
+  padding: 0 24px;
+  
+  
+  
 }
 
 .sidebar {
   grid-area: sidebar;
-  background-color:red;
- 
+
 }
-  
-.header{
-  grid-area: header;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 36px;
-  margin-left:-36px;
-  background-color: lime;
-  
-  
+
+.page_header {
+  grid-area: page_header;
+  margin-left: -36px;
 }
-.content{
-  grid-area: content;
-  background-color:blue;
+
+
+.deals_Chart {
+  grid-area: deals_Chart;
+}
+
+.tasks_Graphic {
+  grid-area: tasks_Graphic;
   
 }
 
-.deals_Chart ,.tasks_Graphic{
+.page_header,.header , .middle_Card,.content span , .deals_Chart span {
+  justify-content:space-between;
+}
+
+.page_header,.header{
+  align-items: center;
+  padding: 20px 36px; 
+}
+
+section, .card , .page_header , .sidebar , .content {
+   box-shadow: 2px 1px 10px 4px rgb(236, 225, 225); 
+}
+
+
+.page_header,.header,.sidebar,.content,.tasks_Graphic,.deals_Chart{
+  background-color: white;
+}
+
+.header{
+  width:100%;
+}
+.card{
+  width: 587px;
+  height: 126px;
+  margin:10px;
+
+  
+}
+
+section{
+  width:445px;
+  height:344px;
   margin-right: 38px;
 }
 
-.content , .tasks_Graphic{
-  margin-bottom:36px;
-}
-.deals_Chart{
-  grid-area: deals_Chart;
-  border: 5px black solid;
+
+.tasks_Graphic {
+  margin-bottom: 36px;
 }
 
 .tasks_Graphic{
-  grid-area:tasks_Graphic;
-  border: 5px black solid;
+  margin-top:-6px;
+}
+
+
+.profile img {
+  width: 46px;
+}
+.content img ,.sidebar img {
+  width: 24px;
+}
+
+.progress_bar{
+  width: 587px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #f5f3f3;
+}
+
+.progress{
+  
+  height: 5px;
+  width: 470px;
+  background-color: green;
+}
+.progress_bar , .progress{
+  border-radius: 10px;
 
 }
 
-ul {
-  display: flex;
-  flex-direction: row;
-  list-style:none;
+.tasks_Graphic img , .deals_Chart img {
+  width:8px;
 }
 
-img{
-  width: 20px;
+#tasks_Chart{
+  width:224px;
 }
-@media (max-width: 375px){
 
-  ul , sidebar {
-    display:none
+#chart{
+  width: 397px;
+  margin: 16px 24px;
+}
+
+.calender ul {
+  grid-template-columns: repeat(7,1fr) ;
+  grid-template-rows: repeat(2,1fr) ;
+  list-style: none;
+}
+
+@media (max-width: 375px) {
+  ul,.sidebar {
+    display: none;
   }
 }
