@@ -30,7 +30,7 @@ html,body,.container{
 
 .container {
   grid-template-columns:256px repeat(4, 1fr);
-  grid-template-rows: 60px repeat(5, 1fr);
+  grid-template-rows: 61px repeat(5, 1fr);
   column-gap: 35px;
   row-gap: 36px;
   grid-template-areas:
@@ -62,7 +62,9 @@ html,body,.container{
 .page_header {
   grid-area: page_header;
   margin-left: -36px;
+  border-bottom: solid #EBEFF2  1px;
 }
+
 
 
 .deals_Chart {
@@ -144,9 +146,6 @@ section{
 
 }
 
-.tasks_Graphic img , .deals_Chart img {
-  width:8px;
-}
 
 #tasks_Chart{
   width:224px;
@@ -156,6 +155,16 @@ section{
   width: 397px;
   margin: 16px 24px;
 }
+
+.sidebar h1 {
+  height: 61px;
+  border-bottom: solid #EBEFF2  1px;
+}
+
+.tasks_Graphic img , .deals_Chart img {
+  width:8px;
+}
+
 
 .calender ul {
   grid-template-columns: repeat(7,1fr) ;
