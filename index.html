@@ -10,59 +10,56 @@
   <body>
     <div class="container">
       <div class="page_header">
-        <span><img src="./Resources/header_search_icon.svg"><h4>Global Search</h4></span>
+        <span><img src="./Resources/header_search_icon.svg">Global Search</span>
         <button>
           <img src="./Resources/searchbar_notifications_icon.svg" />
         </button>
       </div>
       <!-- side bar dissapears when mobile -->
-      <nav class="sidebar">
+      <div class="sidebar">
         <h1>SaaS Kit</h1>
         <div class ="profile">
-          <img  src="./Resources/Sierra_profile_photo.svg"/>
+          <img src="./Resources/Sierra_profile_photo.svg"/>
           <div class="proflie_Text">
-            <h4 >Sierra Ferguson</h4>
-            <span >s.ferguson@gmail.com</span>
+            <h5 >Sierra Ferguson</h5>
+            <span>s.ferguson@gmail.com</span>
           </div>
         </div>
-        <span><img src="./Resources/dashboard_icon.svg" /><a>Dashboard</a></span>
-        <span><img src="./Resources/tasks_icon.svg" /><a>Tasks</a></span>
-        <span><img src="./Resources/email_icon.svg" /><a>Email</a></span>
-        <span><img src="./Resources/contacts_icon.svg" /><a>Contacts</a></span>
-        <span><img src="./Resources/chat_icon.svg" /><a>Chat</a></span>
-        <span><img src="./Resources/deals_icon.svg" /><a>Deals</a></span>
-        <span><img src="./Resources/settings_icon.svg" /><a>Settings</a></span>
+        <div class ="nav">
+          <span><img src="./Resources/dashboard_icon.svg" /><a>Dashboard</a></span>
+          <span><img src="./Resources/tasks_icon.svg" /><a>Tasks</a></span>
+          <span><img src="./Resources/email_icon.svg" /><a>Email</a></span>
+          <span><img src="./Resources/contacts_icon.svg" /><a>Contacts</a></span>
+          <span><img src="./Resources/chat_icon.svg" /><a>Chat</a></span>
+          <span><img src="./Resources/deals_icon.svg" /><a>Deals</a></span>
+        </div>  
         <div class="setting">
-          <span></span><img src="./Resources/toggle_icon.svg" />
-          <button>Toggle Sidebar</button>
+          <span><img src="./Resources/settings_icon.svg" /><a>Settings</a></span>
+          <div>
+            <img src="./Resources/toggle_icon.svg" />
+            <button>Toggle Sidebar</button>
+          </div>
         </div>
-      </nav>
+      </div>
       <div class="content">
         <div class="header">
-          <h4>8 task completed out of 10</h4>
-          <span>Show:<option value="This year,This week,This month" selected>This week<option></option></span>
+          <h5>8 task completed out of 10</h5>
+          <span><p>Show:</p><option value="This year,This week,This month" selected>This week<option></option></span>
         </div>
         <div  class="progress_bar" >
           <div class="progress"></div>
         </div>
         <div class ="calender">
         <!-- disappear when mobile -->
-          <h2>23 December,Sunday</h2>
+          <h5>23 December, Sunday</h5>
           <ul>
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
+            <li>Sun <span class="current_Date">23</span></li>
+            <li>Mon <span>24</span></li>
+            <li>Tue <span>25</span></li>
+            <li>Wed <span>26</span></li>
+            <li>Thu <span>27</span></li>
+            <li>Fri <span>28</span></li>
+            <li>Sat <span>29</span></li>
           </ul>
         </div>
         <div class="card">
@@ -110,22 +107,22 @@
       <section class="deals_Chart">
         <div class = "header">
           <h4>deals chart</h4>
-          <span>Show:<option value="Monthly,Weekly,Daily" selected>Monthly<option></option></span>
+          <span><p>Show:</p><option value="Monthly,Weekly,Daily" selected>Monthly<option></option></span>
         </div>
-        <span><img src="./Resources/deals_chart_Ellipse.svg">Closed Deals</span>
-        <img id="chart" src="./Resources/deals_chart_graphic.svg">
+        <span><img class=".elipse" src="./Resources/deals_chart_Ellipse.svg">Closed Deals</span>
+        <img class="chart" src="./Resources/deals_chart_graphic.svg">
       </section>
       <section class="tasks_Graphic">
         <div class = "header">
           <h4>Tasks</h4>
-          <span>Show:<option value="Monthly,Weekly,Daily" selected>Monthly<option></option></span>
+          <span><p>Show:</p><option value="Monthly,Weekly,Daily" selected>Monthly<option></option></span>
         </div>
         <div class="chart_container">
-          <img id="tasks_Chart" src="./Resources/tasks_graphic.svg"> 
+          <img class="tasks_Chart" src="./Resources/tasks_graphic.svg"> 
           <div class ="text">
-            <span><img src="./Resources/yellow_elipse.svg">Active</span>
-            <span><img src="./Resources/green_elipse.svg">Completed</span>
-            <span><img src="./Resources/red_elipse.svg">Ended</span>
+            <span><img class=".elipse" src="./Resources/yellow_elipse.svg">Active</span>
+            <span><img class=".elipse" src="./Resources/green_elipse.svg">Completed</span>
+            <span><img class=".elipse" src="./Resources/red_elipse.svg">Ended</span>
           </div> 
         </div>
       </section>
