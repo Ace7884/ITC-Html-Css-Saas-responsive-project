@@ -66,12 +66,14 @@ nav,
 
 .container {
   grid-template-columns: 260px calc(1440px - 260px - 1fr ) 1fr;
-  grid-template-rows: 60px calc(850px - 60px - 1fr ) 1fr;
+  grid-template-rows: 60px  211px calc(850px - 211px - 60px -2fr) repeat(2 1fr);
   column-gap:30px;
   row-gap: 30px;
   grid-template-areas:
     "sidebar page_header page_header "
     "sidebar calender_Content  section"
+    "sidebar content           section"
+    "sidebar content           section"
     "sidebar content           section";
   align-items:flex-start;
   }
@@ -83,11 +85,12 @@ nav,
 }
 
 .content {
+  position: relative;
   grid-area: content;
   align-items: center;
   height: min-content;
-  padding: 20px;
-  margin-top:-160px;
+  padding: 0 20px;
+  margin-top:-25px;
   border-radius: 0 0 5px 5px;
 }
 
@@ -296,7 +299,7 @@ li {
 
 .setting {
   display: flex;
-  height: 50%;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
   padding-left: 20px;
@@ -400,29 +403,41 @@ section,
   border-radius: 5px;
 }
 section {
-  width:90%;
+  height: 60%;
+  width:95%;
   padding: 20px 0;
   justify-content: center;
-  height: min-content;
   margin-right:10px;
 }
 
+.tasks_Section{
+  border: #323C47 1px solid;
+  height: 40px;
+  margin-top: 200px;
+}
+
 .tasks_container{
+  height: 40px;
   width: 100%;
 }
 
 section span{
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .chart {
+  height:20px;
   padding: 0 20px;
-  width:100%;
   margin: 16px 0px;
 }
 
+.chart_Container{
+  height:50%;
+  width: 100%;
+
+}
 .tasks_Chart{
-  width: 40%;
+  height:50%;
   margin: 16px 0px;
 }
 
