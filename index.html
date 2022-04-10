@@ -43,14 +43,15 @@
       </div>
       <div class="calender_Content">
         <div class="header">
-          <h5>8 task completed out of 10</h5>
+          <h4>8 task completed out of 10</h4>
+          <!-- Insert arrow on option if doesnt appear by activation -->
           <span><p>Show:</p><option value="This year,This week,This month" selected>This week<option></option></span>
         </div>
         <div  class="progress_bar" >
           <div class="progress"></div>
         </div>
+        <!-- element disappear when mobile -->
         <div class ="calender">
-        <!-- disappear when mobile -->
           <h5>23 December, Sunday</h5>
           <ul class="calender_Days">
             <li>Sun<span class="current_Day">23</span></li>
@@ -65,59 +66,60 @@
       </div>
       <div class="content">
         <div class="card">
-          <span>
-            <h3>Send benefit review by Sunday</h3>
+          <div class="card_Heading">
+            <h4>Send benefit review by Sunday</h4>
             <span>Reminder</span>
-          </span>
-          <p>Due date:</p><span>December 23,2018</span>
-          <span>
-            <span>George Fields<img src="./Resources/George_photo.svg"/></span>
-            <i>Completed</i>
-          </span>
-        </div>
-        <div class="card">
-          <span>
-            <h2>Invite to office meet-up</h2>
-            <span>call</span>
-          </span>
-          <h4>Due date:December 23,2018</h4>  
-          <div class="middle_Card">
-            <img src="./Resources/Rebecca_photo.svg" />
-            <span>Rebecca Moore</span>
-            <span>
-              <button><img src="./Resources/edit_icon.svg" /></button>
-              <button><img src="./Resources/delete_icon.svg" /></button>
-              <i>Ended</i>
-            </span>
+          </div>
+          <p>Due date:<strong>December 23,2018</strong></p>
+          <div class="status">
+              <span><img src="./Resources/George_photo.svg"/>George Fields</span>
+              <i>Completed</i>
           </div>
         </div>
         <div class="card">
-          <span>
-            <h2>Office meet-up</h2>
-            <span>Event</span>
-          </span>
-          <h4>Due date:December 23,2018</h4>
-          <span>
-            <span>Lindsey Stroud<img src="./Resources/Lindsey_photo.svg"/></span>
-            <i>Completed</i>
-          </span>
+          <div class="card_Heading">
+            <h4>Invite to office meet-up</h4>
+            <span>call</span>
+          </div>
+          <p>Due date:<strong>December 23,2018</strong></p>  
+          <div class="status">
+            <span><img src="./Resources/Rebecca_photo.svg"/>Rebecca Moore</span>
+            <div class="middle_Card_Buttons">
+              <button class="edit_Button"><img src="./Resources/edit_icon.svg"/></button>
+              <button><img src="./Resources/delete_icon.svg"/></button>
+              <i class="middle_Indicator">Ended</i>
+            </div> 
+          </div>
         </div>
-        <button><h4>Show more</h4></button>
+        <div class="card">
+          <div class="card_Heading">
+            <h4>Office meet-up</h4>
+            <span>Event</span>
+          </div>
+          <p>Due date:<strong>23,2018</strong>/p>
+            <div class="status">
+              <span><img src="./Resources/Lindsey_photo.svg"/>Lindsey Stroud</span>
+              <i>Completed</i>
+            </div>
+        </div>
+        <button class="extend_Btn"><h4>Show more</h4></button>
       </div>
-      <section class="deals_Chart">
+      <section>
         <div class = "header">
           <h4>deals chart</h4>
           <span><p>Show:</p><option value="Monthly,Weekly,Daily" selected>Monthly<option></option></span>
         </div>
-        <span><img class=".elipse" src="./Resources/deals_chart_Ellipse.svg">Closed Deals</span>
-        <img class="chart" src="./Resources/deals_chart_graphic.svg">
+        <div class="chart_Container">
+          <span><img class=".elipse" src="./Resources/deals_chart_Ellipse.svg">Closed Deals</span>
+          <img class="chart" src="./Resources/deals_chart_graphic.svg">
+        </div> 
       </section>
-      <section class="tasks_Graphic">
-        <div class = "header">
+      <section >
+        <div class ="header">
           <h4>Tasks</h4>
           <span><p>Show:</p><option value="Monthly,Weekly,Daily" selected>Monthly<option></option></span>
         </div>
-        <div class="chart_container">
+        <div class="tasks_Container">
           <img class="tasks_Chart" src="./Resources/tasks_graphic.svg"> 
           <div class ="text">
             <span><img class=".elipse" src="./Resources/yellow_elipse.svg">Active</span>

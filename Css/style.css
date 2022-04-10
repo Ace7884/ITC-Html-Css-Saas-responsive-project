@@ -15,7 +15,7 @@
 html,
 body,
 .container {
-  height: 100vh;
+  height:min-content;
   width: 100vw;
   background-color: rgba(244, 242, 242, 0.388);
 }
@@ -23,6 +23,9 @@ body,
   display: grid;
 }
 
+span,
+nav,
+ul ,
 .page_header,
 .sidebar,
 .header,
@@ -31,69 +34,67 @@ body,
 .calender_Content,
 .card,
 .text,
-.chart_container,
-span,
-ul {
+.tasks_Container,
+.chart_Container
+{
   display: flex;
 }
 
+span,
 .page_header,
 .header,
 .profile,
-.chart_container,
-span {
+.tasks_Container {
   flex-direction: row;
 }
 
+nav,
 .sidebar,
 .proflie_Text,
 .content,
 .calender_Content,
 .card,
-.text {
+.text,
+.chart_Container
+{
   flex-direction: column;
 }
-.chart_container,
+.tasks_Container,
 .text {
   justify-content: center;
 }
 
 .container {
-  grid-template-columns: 340px repeat(4, 1fr);
-  grid-template-rows: 81px repeat(4, 1fr);
-  column-gap: 48px;
-  row-gap: 47px;
+  grid-template-columns: 260px calc(1440px - 260px - 1fr ) 1fr;
+  grid-template-rows: 60px calc(850px - 60px - 1fr ) 1fr;
+  column-gap:30px;
+  row-gap: 30px;
   grid-template-areas:
-    "sidebar page_header page_header page_header    page_header"
-    "sidebar calender_Content     calender_Content     deals_Chart    deals_Chart"
-    "sidebar content     content     deals_Chart    deals_Chart"
-    "sidebar content     content     tasks_Graphic  tasks_Graphic"
-    "sidebar content     content     tasks_Graphic  tasks_Graphic";
-}
+    "sidebar page_header page_header "
+    "sidebar calender_Content  section"
+    "sidebar content           section";
+  align-items:flex-start;
+  }
 
 .calender_Content {
   grid-area: calender_Content;
-  width: 819px;
-  height: 206px;
-  padding: 0 32px;
-  margin-bottom: -46px;
+  padding: 20px 20px 0;
   border-radius: 5px 5px 0 0;
 }
 
 .content {
-  align-items: center;
   grid-area: content;
-  width: 819px;
-  height: 600px;
-  padding: 10px 32px;
-  margin-bottom: 32px;
+  align-items: center;
+  height: min-content;
+  padding: 20px;
+  margin-top:-160px;
   border-radius: 0 0 5px 5px;
 }
 
 .sidebar {
-  height: 100%;
   grid-area: sidebar;
-  display: block;
+  height: 100%;
+  
 }
 .page_header {
   grid-area: page_header;
@@ -109,16 +110,21 @@ span {
   grid-area: tasks_Graphic;
 }
 
-.middle_Card{
-  display: inline-block;
+
+.card {
+  width: 100%;
+  height: min-content;
+  margin: 25px 20px 0;
+  padding: 20px;
+  justify-content: space-between; 
 }
+
 
 .page_header,
 .header,
-.middle_Card,
 .calender_Content span,
-.content span,
-.deals_Chart span {
+.content span
+{
   justify-content: space-between;
 }
 
@@ -136,40 +142,104 @@ section,
   box-shadow: 0 0 8px 2px rgb(234, 236, 236);
 }
 
+section,
 .page_header,
 .header,
 .sidebar,
 .calender_Content,
-.content,
-.tasks_Graphic,
-.deals_Chart {
+.content{
   background-color: white;
 }
+
+  
 
 h1 {
   display: flex;
   font-family: "Open Sans", sans-serif;
+  height: 71px;
+  width: 100%;
   font-size: 22px;
   font-weight: 600;
   color: var(--highlighted);
-  justify-content: center;
-  height: 82px;
-  width: 100%;
+  align-items: center;
+  padding-left: 20px;
   border-bottom: solid #ebeff2 2px;
 }
 
 p {
+  color: rgb(167, 164, 164);
   font-size: small;
 }
 
-button {
+h4{
+  font-size: 13px;
+  color: #323C47;
+  
+  
+}
+strong{
+  color:rgb(80, 80, 80) ;
+  font-weight: 400;
+}
+
+i   {
+  
+  padding: 3px 0;
+  text-align: center;
+  font-style: normal;
+  width:83px;
+  font-size:11px;
+  background-color: rgb(27, 207, 105);
+  color:white;
+  border-radius: 4px;
+
+}
+
+.middle_Card_Buttons{
+  display: flex;
+  height: fit-content;
+  
+}
+
+
+ i { 
+  padding: 3px 0;
+  text-align: center;
+  font-style: normal;
+  width:83px;
+  font-size:11px;
+  background-color: rgb(27, 207, 105);
+  color:white;
+  border-radius: 4px;
+
+ 
+}
+
+.middle_Indicator {
+    height: min-content;
+    background-color: rgb(235, 92, 92);
+}
+
+
+button{
   font-size: 15px;
-  margin:25px 0;
   background-color: transparent;
   border: none;
+}
+
+.extend_Btn button{
+  margin:35px 0;
   color:var(--highlighted);
   font-weight: 700;
   width:fit-content;
+}
+
+.extend_Btn h4{
+  margin:15px 0 5px;
+  color:var(--highlighted);
+  font-weight: 700;
+  width:fit-content;
+
 }
 
 .profile {
@@ -183,10 +253,18 @@ button {
   margin-bottom: 40px;
 }
 
+.tasks_Container span , .chart_Container span, .proflie_Text span,
+.page_header , .content span{
+
+  font-size: 13px;
+  font-weight:500;
+
+}
+
 .proflie_Text span,
 .page_header , .content span {
-  font-size: 12px;
-  color: rgba(126, 124, 148, 0.811);
+ 
+  color: rgba(108, 107, 117, 0.811);
 }
 
 .page_header,
@@ -227,7 +305,8 @@ li {
 .content img,
 .nav img,
 .setting span img {
-  width: 20px;
+  width: 22px;
+  margin-right: 9px;
 }
 
 .nav{
@@ -265,7 +344,7 @@ option {
 .calender_Days {
   justify-content: space-between;
   width: 100%;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 
@@ -301,47 +380,53 @@ li span {
   margin-top: 16px;
 }
 
-.header {
-  padding: 20px 0 0 0;
-  width: 100%;
-}
-.card {
-  width: 756px;
-  height: 165px;
-  margin: 25px 20px 0;
-  padding: 20px;
-  
+
+
+.card_Heading ,.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card,
-.deals_Chart,
-.tasks_Graphic,
-.header {
+.header{
+  align-items: center;
+  padding: 0 20px 10px;
+  width: 100%;
+  border-bottom: solid #ebeff2 2px;
+}
+
+section,
+.card {
   border-radius: 5px;
 }
 section {
-  width: 445px;
-  height: 344px;
-  margin-right: 38px;
+  width:90%;
+  padding: 20px 0;
+  justify-content: center;
+  height: min-content;
+  margin-right:10px;
 }
 
-.tasks_Graphic {
-  margin-bottom: 36px;
+.tasks_container{
+  width: 100%;
 }
 
-.tasks_Graphic {
-  margin-top: -6px;
-}
-.tasks_Chart {
-  width: 224px;
-  margin: 32px 48px;
+section span{
+  padding: 10px 20px;
 }
 
 .chart {
-  border: black dotted 1px;
-  width: 397px;
-  margin: 16px 24px;
+  padding: 0 20px;
+  width:100%;
+  margin: 16px 0px;
 }
+
+.tasks_Chart{
+  width: 40%;
+  margin: 16px 0px;
+}
+
+
 
 .elipse {
   width: 8px;
@@ -349,7 +434,8 @@ section {
 
 @media (max-width: 375px) {
   ul,
-  .sidebar {
+  .sidebar ,.edit_Button ,.calender_Content{
     display: none;
+  
   }
 }
