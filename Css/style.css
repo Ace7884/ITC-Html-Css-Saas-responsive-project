@@ -20,14 +20,11 @@ body,
   width: 100vw;
   background-color: rgba(244, 242, 242, 0.388);
 }
-.container {
-  display: grid;
-}
 
 span,
 ul,
 .toggle_Button,
-.page_header,
+.search_field,
 .sidebar,
 .header,
 .profile,
@@ -42,7 +39,7 @@ ul,
 }
 
 
-.page_header,
+.search_field,
 .header,
 .profile,
 .toggle,
@@ -67,15 +64,17 @@ nav,
 }
 
 .container {
-  grid-template-columns: 250px 1fr calc(1440px - 250px - 1fr);
-  grid-template-rows: 137px 1fr calc(850px - 137px -1fr);
+  display: grid;
+  grid-template-columns: 250px repeat(3 1fr);
+  grid-template-rows: 137px  repeat(4 1fr);
   column-gap: 36px;
   row-gap: 36px;
   grid-template-areas:
-    "sidebar page_header page_header "
-    "sidebar main_Content  section"
-    "sidebar main_Content  section"
-    "sidebar main_Content  section";
+    "sidebar search_field search_field search_field"
+    "sidebar main_Content  main_Content         top_Chart"
+    "sidebar main_Content  main_Content         top_Chart"
+    "sidebar main_Content  main_Content         section"
+    "sidebar main_Content  main_Content         section";
   align-items: flex-start;
 }
 
@@ -86,20 +85,22 @@ nav,
   width: 100%;
 }
 
-span{
-  align-items: center;
-}
 .sidebar {
   grid-area: sidebar;
   height: 100%;
 }
-.page_header {
-  grid-area: page_header;
+.search_field {
+  grid-area: search_field;
   margin-left: -48px;
   border-bottom: solid #ebeff2 1px;
+  align-items: center;
+  padding: 20px 36px;
 }
 
+
+
 .main_Content {
+  width: min-content;
   grid-area: main_Content;
   height: fit-content;
   border-radius: 5px;
@@ -108,6 +109,28 @@ span{
   width: 100%;
 }
 
+
+.top_Chart_Container {
+  grid-area: top_Chart;
+  width:200px;
+  margin-top: 0;
+  padding-bottom: 0px;
+}
+
+
+section {
+  grid-area: section;
+  align-items: center;
+  width: 200px;
+  padding-top: 10px;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: 58px;
+}
+
+.tasks_Chart{
+  width: 100px;
+}
 .divider {
   height: 1px;
   width: 113%;
@@ -123,27 +146,27 @@ span{
   justify-content: space-between;
 }
 
-.page_header,
+.search_field,
 .header,
 .calender_Content span,
 .content span {
   justify-content: space-between;
 }
 
-.page_header {
+
+span{
   align-items: center;
-  padding: 20px 36px;
 }
 
 section,
 .card,
-.page_header,
+.search_field,
 .sidebar {
   box-shadow: 0 0 8px 2px rgb(234, 236, 236);
 }
 
 section,
-.page_header,
+.search_field,
 .header,
 .sidebar,
 .main_Content {
@@ -246,14 +269,14 @@ button {
 }
 
 .proflie_Text span,
-.page_header ,
+.search_field ,
 .content span {
   font-size: 12px;
   font-weight: 500;
 }
 
 .proflie_Text span,
-.page_header span input,
+.search_field span input,
 .content span,
 ::placeholder{
    color: rgba(108, 107, 117, 0.811); 
@@ -281,7 +304,7 @@ input:hover , input:focus{
   transition: 0.5s
 }
 
-.page_header,
+.search_field,
 li {
   font-weight: 100;
   color: rgb(195, 199, 210);
@@ -457,14 +480,7 @@ section,
 .card {
   border-radius: 5px;
 }
-section {
-  align-items: center;
-  width: 95%;
-  padding-top: 10px;
-  justify-content: center;
-  margin-right: 20px;
-  margin-top: 58px;
-}
+
 
 .tasks_container {
   width: 100%;
@@ -479,10 +495,7 @@ section span {
   /* margin-bottom: 16px; */
 }
 
-.top_Chart_Container {
-  margin-top: 0;
-  padding-bottom: 0px;
-}
+
 
 .chart_Container {
   width: 100%;
@@ -510,7 +523,7 @@ section span {
 @media (max-width: 375px) {
   ul,
   .sidebar,
-  .page_header,
+  .search_field,
   .edit_Button {
     display: none;
   }
