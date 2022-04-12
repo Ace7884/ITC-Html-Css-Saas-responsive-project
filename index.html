@@ -8,8 +8,10 @@
     <title>SaaS Kit</title>
   </head>
   <body>
+   
     <div class="container">
       <div class="search_field">
+        <!-- SearchField disappears when mobile -->
         <span>
           <img src="./Resources/header_search_icon.svg">
           <input type="text" placeholder="Global Search">
@@ -21,8 +23,8 @@
             </svg>            
         </button>
       </div>
-      <!-- side bar dissapears when mobile -->
       <div class="sidebar">
+        <!-- side bar disappears when mobile -->
         <h1>SaaS Kit</h1>
         <div class ="profile">
           <img src="./Resources/Sierra_profile_photo.svg"/>
@@ -81,16 +83,15 @@
         <div class="calender_Content">
           <div class="header">
             <h4>8 task completed out of 10</h4>
-            <!-- Insert arrow on option if doesnt appear by activation -->
             <span><p>Show:</p><select  name='date_Display' id='date_Display1'><option value="This year">This year</option><option value="This month">This month</option><option value="This week" selected="selected">This week</option><option value="Today">Today</option></select></span>
           </div>
           <div  class="progress_bar" >
             <div class="progress"></div>
           </div>
-          <!-- element disappear when mobile -->
           <div class ="calender">
             <h5>23 December, Sunday</h5>
             <ul class="calender_Days">
+               <!-- calender disappear when mobile -->
               <li>Sun<span class="current_Day">23</span></li>
               <li>Mon<span>24</span></li>
               <li>Tue<span>25</span></li>
@@ -123,7 +124,7 @@
             <div class="status">
               <span><img src="./Resources/Rebecca_photo.svg"/>Rebecca Moore</span>
               <div class="middle_Card_Buttons">
-                <svg width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="edit_Button" width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="icon" d="M2 11.5V14H4.5L11.8733 6.62662L9.37333 4.12662L2 11.5ZM13.8067 4.69329C14.0667 4.43329 14.0667 4.01329 13.8067 3.75329L12.2467 2.19329C11.9867 1.93329 11.5667 1.93329 11.3067 2.19329L10.0867 3.41329L12.5867 5.91329L13.8067 4.69329Z" fill="currentColor"/>
                   </svg>
                   <svg width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

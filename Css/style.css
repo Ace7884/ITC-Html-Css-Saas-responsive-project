@@ -104,20 +104,21 @@ nav,
 
 .top_Chart_Container {
   grid-area: top_Chart;
-  height: 50vh;
-  padding: 15px 20px;
+  height: 54vh;
+  
   
 }
 
 .tasks_Container,
 .chart_Container{
   width: 100%;
-  align-items: center;
+  
 }
 
 
 .chart {
   width: 24vw;
+  align-self: center;
   
 }
 
@@ -126,8 +127,8 @@ section {
   grid-area: section;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;
-  padding:0 10px;
+  padding-top: 20px;
+  margin-bottom: 50px;
   margin:0;
   margin-right:3vw;
  
@@ -277,8 +278,8 @@ button {
 .proflie_Text span,
 .search_field ,
 .content span {
-  font-size:1vw;
-  font-weight: 500;
+  font-size:1.75vh;
+  
 }
 
 .proflie_Text span,
@@ -323,7 +324,7 @@ li {
 .nav,
 .setting,
 li {
-  font-size:2vh;
+  font-size:2.5vh;
 }
 .nav,
 .setting {
@@ -346,12 +347,13 @@ li {
 }
 
 
-.content svg,
+
 .nav svg,
-span svg,
-span img,
 .setting span svg,
-.toggle_Button svg{
+.toggle_Button svg,
+.content svg,
+span svg,
+span img{
   width: 22px;
   margin-right: 9px;
 }
@@ -472,6 +474,10 @@ section .header {
   border-bottom: solid #ebeff2 1px;
 }
 
+section .text{
+  padding-right: 20px;
+}
+
 .header {
   align-items: center;
   padding: 0 20px 10px;
@@ -513,16 +519,71 @@ section span {
   width: 8px;
   margin-right: 5px;
 }
+@media   (max-width: 848px) {
 
-
-@media (max-width: 420px) {
-  ul,
-  .sidebar,
-  .search_field,
-  .edit_Button {
+  .profile img{
     display: none;
   }
-  .container {
-    display: block;
+  .proflie_Text span{
+    font-size: 1vw;
+    justify-content: center;
   }
+
+}
+
+@media  (max-width: 645px) {
+
+  .nav svg,
+  .setting span svg,
+  .toggle_Button svg{
+    display: none;
+  }
+
+}
+
+  
+@media   (max-width: 425px) {
+  html,body,.container{
+    display: block;
+    width:100%;
+
+  }
+  .sidebar,.calender_Days,.search_field,.divider,
+  .edit_Button,.extend_Btn ,section h4 {
+    display: none;
+  }
+  .calender_Content,.main_Content,section,.top_Chart_Container{
+   margin:0px;
+    width:100%;
+   
+  }
+
+  
+  section .header{
+    justify-content: flex-end;
+  }
+
+  section ,.top_Chart_Container{
+    padding: 20px;
+    box-shadow: none;
+   
+  }
+  
+
+  .chart ,.tasks_Chart ,.header {
+    width:100%;
+  }
+
+  .content svg{
+    width:14px;
+  }
+  
+  p,h4,i,select,.content span {
+    font-size: 10px;
+  }
+  i{
+    font-size:7px;
+    width:19vw;
+  }
+  
 }
