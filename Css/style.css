@@ -14,10 +14,9 @@
 
 html,
 body,
-.container,
-.main_Content {
-  height: min-content;
-  width: 100vw;
+.container{
+  height: 100%;
+  width: 100%;
   background-color: rgba(244, 242, 242, 0.388);
 }
 
@@ -65,28 +64,23 @@ nav,
 
 .container {
   display: grid;
-  grid-template-columns: 250px repeat(3 1fr);
-  grid-template-rows: 137px  repeat(4 1fr);
-  column-gap: 36px;
-  row-gap: 36px;
+  grid-template-columns:repeat(4 1fr);
+  grid-template-rows:repeat(5 1fr);
+  column-gap: 38px ;
+  row-gap:39px;
   grid-template-areas:
-    "sidebar search_field search_field search_field"
-    "sidebar main_Content  main_Content         top_Chart"
-    "sidebar main_Content  main_Content         top_Chart"
-    "sidebar main_Content  main_Content         section"
-    "sidebar main_Content  main_Content         section";
+    "sidebar search_field search_field   search_field"
+    "sidebar main_Content  main_Content  top_Chart"
+    "sidebar main_Content  main_Content  top_Chart"
+    "sidebar main_Content  main_Content  section"
+    "sidebar main_Content  main_Content  section";
   align-items: flex-start;
 }
 
-.content {
-  margin-top: 2px;
-  grid-area: content;
-  align-items: center;
-  width: 100%;
-}
 
 .sidebar {
   grid-area: sidebar;
+  width: 20vw;
   height: 100%;
 }
 .search_field {
@@ -98,51 +92,72 @@ nav,
 }
 
 
-
 .main_Content {
-  width: min-content;
+  width:80vw;
   grid-area: main_Content;
   height: fit-content;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 30px;
-  width: 100%;
 }
 
 
 .top_Chart_Container {
   grid-area: top_Chart;
-  width:200px;
-  margin-top: 0;
-  padding-bottom: 0px;
+  height: 50vh;
+  padding: 15px 20px;
+  
+}
+
+.tasks_Container,
+.chart_Container{
+  width: 100%;
+  align-items: center;
+}
+
+
+.chart {
+  width: 24vw;
+  
 }
 
 
 section {
   grid-area: section;
   align-items: center;
-  width: 200px;
-  padding-top: 10px;
   justify-content: center;
-  margin-right: 20px;
-  margin-top: 58px;
+  padding-top: 10px;
+  padding:0 10px;
+  margin:0;
+  margin-right:3vw;
+ 
 }
 
-.tasks_Chart{
-  width: 100px;
+
+.tasks_Chart {
+  width: 23.75vw;
+  padding:2vw;
+  
+  
+}
+
+.content {
+  margin-top: 2px;
+  align-items: center;
+  width: 100%;
 }
 .divider {
   height: 1px;
-  width: 113%;
+  width: 104.5%;
   background-color: #ebeff2;
   position: relative;
   left: -20px;
 }
 .card {
   width: 100%;
-  height: 138px;
-  margin: 25px 20px 0;
-  padding: 20px;
+  height: 20vh;
+  margin: 2vh 0;
+  padding: 3vh;
   justify-content: space-between;
 }
 
@@ -178,7 +193,7 @@ h1 {
   font-family: "Open Sans", sans-serif;
   height: 127px;
   width: 100%;
-  font-size: 22px;
+  font-size: 3vh;
   font-weight: 600;
   color: var(--highlighted);
   align-items: center;
@@ -188,11 +203,11 @@ h1 {
 
 p {
   color: rgb(167, 164, 164);
-  font-size: small;
+  font-size: 2.5vh;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 2vh;
   color: #323c47;
 }
 
@@ -205,8 +220,8 @@ i {
   padding: 3px 0;
   text-align: center;
   font-style: normal;
-  width: 83px;
-  font-size: 11px;
+  width: 7vw;
+  font-size: 1.5vh;
   background-color: rgb(27, 207, 105);
   color: white;
   border-radius: 4px;
@@ -217,16 +232,6 @@ i {
   height: fit-content;
 }
 
-i {
-  padding: 3px 0;
-  text-align: center;
-  font-style: normal;
-  width: 83px;
-  font-size: 11px;
-  background-color: rgb(27, 207, 105);
-  color: white;
-  border-radius: 4px;
-}
 
 i:hover{
   background-color: rgb(97, 227, 10) ;
@@ -245,7 +250,7 @@ i:hover{
   transition: 0.5s;
 }
 button {
-  font-size: 15px;
+  font-size: 1vh;
   background-color: transparent;
   border: none;
 }
@@ -262,16 +267,17 @@ button {
 }
 
 .proflie_Text {
-  width: 146px;
+  width: 12vw;
   height: 38px;
   padding: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+ 
 }
 
 .proflie_Text span,
 .search_field ,
 .content span {
-  font-size: 12px;
+  font-size:1vw;
   font-weight: 500;
 }
 
@@ -311,18 +317,18 @@ li {
 }
 
 .profile img {
-  width: 46px;
+  width: 3vw;
 }
 
 .nav,
 .setting,
 li {
-  font-size: small;
+  font-size:2vh;
 }
 .nav,
 .setting {
   padding-left: 20px;
-  font-size: small;
+  font-size:2vh;
   font-weight: 550;
 }
 
@@ -358,7 +364,7 @@ span img,
 }
 
 .setting button {
-  font-size: 12px;
+  font-size: 1.5vh;
 }
 
 .icon{
@@ -383,7 +389,7 @@ select {
   appearance: none;
   border: none;
   color: var(--highlighted);
-  font-size: 13px;
+  font-size: 2vh;
   padding-right: 5px;
   padding-left: 2px;
   background-image: url(../Resources/drop_Down_Arrow.svg);
@@ -483,6 +489,8 @@ section,
 
 
 .tasks_container {
+  height:40vh;
+  
   width: 100%;
 }
 
@@ -490,24 +498,11 @@ section span {
   padding: 5px 0px;
 }
 
-.chart {
-  padding: 0 20px 20px;
-  /* margin-bottom: 16px; */
-}
 
-
-
-.chart_Container {
-  width: 100%;
-}
-.tasks_Chart {
-  padding-right: 27px;
-  margin: 28px 0px;
-}
 
 .tasks_Container span,
 .chart_Container span {
-  font-size: 11px;
+  font-size: 1.5vh;
 }
 
 .chart_Container span {
@@ -520,7 +515,7 @@ section span {
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   ul,
   .sidebar,
   .search_field,
