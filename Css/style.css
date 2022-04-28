@@ -10,23 +10,56 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   padding: 0;
-  margin: 0;
 }
 
 html,
 body,
 .container {
-  height: 100%;
-  width: 100%;
   background-color: rgba(244, 242, 242, 0.388);
 }
+
+html,
+body,
+h1,
+input,
+.progress_bar,
+.container,
+.main_Content,
+.calender_Days,
+.content,
+.card,
+.tasks_Container,
+.chart_Container,
+.header,
+.tasks_container {
+  width: 100%;
+}
+
+*,
+section {
+  margin: 0;
+}
+
+html,
+body,
+.container,
+.main_Content,
+.middle_Card_Buttons {
+  height: fit-content;
+}
+
 p {
   color: rgb(167, 164, 164);
-  font-size: 2.5vh;
+}
+
+.nav,
+.setting,
+h4,
+select {
+  font-size: 2vh;
 }
 
 h4 {
-  font-size: 2vh;
   color: #323c47;
 }
 
@@ -35,27 +68,54 @@ strong {
   font-weight: 400;
 }
 
+i,
+li,
+.current_Day {
+  text-align: center;
+}
+
+i,
+.setting button,
+.tasks_Container span,
+.chart_Container span {
+  font-size: 1.5vh;
+}
+
+i,
+.current_Day,
+input:hover,
+input:focus,
+input:hover::placeholder {
+  color: white;
+}
+
 i {
   padding: 3px 0;
-  text-align: center;
   font-style: normal;
   width: 7vw;
-  font-size: 1.5vh;
   background-color: rgb(27, 207, 105);
-  color: white;
   border-radius: 4px;
+}
+
+button,
+input,
+select {
+  border: none;
 }
 
 button {
   font-size: 1vh;
   background-color: transparent;
-  border: none;
 }
 
 span,
 ul,
+h1,
+li,
 .toggle_Button,
 .search_field,
+.card_Heading,
+.status,
 .sidebar,
 .header,
 .profile,
@@ -63,6 +123,8 @@ ul,
 .content,
 .calender_Content,
 .card,
+.setting,
+.middle_Card_Buttons,
 .text,
 .tasks_Container,
 .chart_Container {
@@ -78,6 +140,7 @@ ul,
 }
 
 nav,
+li,
 .sidebar,
 .proflie_Text,
 .main_Content,
@@ -85,15 +148,18 @@ nav,
 .calender_Content,
 .card,
 .text,
-.chart_Container {
+.chart_Container,
+.setting {
   flex-direction: column;
 }
+
 .tasks_Container,
 section,
 .text {
   justify-content: center;
 }
 
+input,
 .sidebar,
 .setting {
   height: 100%;
@@ -114,6 +180,12 @@ h1,
 .header,
 .toggle_Button {
   align-items: center;
+}
+
+section,
+.main_Content,
+.card {
+  border-radius: 5px;
 }
 
 /* display setting for desktop */
@@ -146,11 +218,7 @@ h1,
 }
 
 .main_Content {
-  width: 80vw;
   grid-area: main_Content;
-  height: fit-content;
-  border-radius: 5px;
-  padding: 20px;
   margin-bottom: 30px;
 }
 
@@ -163,7 +231,6 @@ section {
   grid-area: section;
   padding-top: 20px;
   margin-bottom: 50px;
-  margin: 0;
   margin-right: 3vw;
 }
 
@@ -176,16 +243,29 @@ li {
 }
 
 /* SideBar */
+h1,
+select,
+li:hover,
+.icon:hover,
+.nav a:hover,
+.setting a:hover,
+.setting button:hover,
+.extend_Btn h4:hover {
+  color: var(--highlighted);
+}
+
+h1,
+.nav,
+.setting,
+.setting {
+  padding-left: 20px;
+}
 
 h1 {
-  display: flex;
   font-family: "Open Sans", sans-serif;
   height: 127px;
-  width: 100%;
   font-size: 3vh;
   font-weight: 600;
-  color: var(--highlighted);
-  padding-left: 20px;
 }
 
 .profile {
@@ -211,13 +291,14 @@ h1 {
 
 .nav,
 .setting,
-li {
+li,
+p {
   font-size: 2.5vh;
 }
+
 .nav,
-.setting {
-  padding-left: 20px;
-  font-size: 2vh;
+.setting,
+li:hover {
   font-weight: 550;
 }
 
@@ -226,56 +307,62 @@ li {
   padding: 10px;
 }
 
-.setting {
-  display: flex;
-  flex-direction: column;
+.search_field,
+.header,
+.calender_Content span,
+.content span,
+.setting,
+.calender_Days,
+.card,
+.card_Heading,
+.status {
   justify-content: space-between;
-  padding-left: 20px;
 }
 
-.setting img {
+.setting img,
+.content svg {
   width: 14px;
-}
-
-.setting button {
-  font-size: 1.5vh;
 }
 
 /* Main Content */
 
 .calender_Days {
-  justify-content: space-between;
-  width: 100%;
   padding-top: 40px;
 }
 
 .content {
   margin-top: 2px;
-  width: 100%;
 }
 .divider {
   height: 1px;
   width: 104.5%;
   background-color: #ebeff2;
-  position: relative;
   left: -20px;
 }
+.divider,
+.current_Day {
+  position: relative;
+}
 .card {
-  width: 100%;
   height: 20vh;
   margin: 2vh 0;
   padding: 3vh;
-  justify-content: space-between;
-}
-
-.middle_Card_Buttons {
-  display: flex;
-  height: fit-content;
 }
 
 i:hover {
   background-color: rgb(97, 227, 10);
   box-shadow: rgb(43, 255, 0) 0 0 20px 1px;
+}
+
+i:hover,
+.middle_Indicator:hover,
+input:hover::placeholder,
+li:hover,
+.icon:hover,
+.nav a:hover,
+.setting a:hover,
+.setting button:hover,
+.extend_Btn h4:hover {
   transition: 0.5s;
 }
 
@@ -287,7 +374,6 @@ i:hover {
 .middle_Indicator:hover {
   background-color: red;
   box-shadow: rgb(231, 13, 13) 0 0 20px 1px;
-  transition: 0.5s;
 }
 
 .extend_Btn h4 {
@@ -297,36 +383,34 @@ i:hover {
 }
 
 input {
-  border: none;
   border-radius: 2px;
-  width: 100%;
-  height: 100%;
+}
+
+select,
+input:hover,
+input:focus {
+  outline: none;
 }
 
 input:hover,
 input:focus {
-  outline: none;
-  color: white;
   background-color: var(--highlighted);
   box-shadow: var(--highlighted) 0 0 30px 1px;
   transition: 0.5s ease-in-out;
 }
 
-input:hover::placeholder {
-  color: white;
-  transition: 0.5s;
-}
 select {
-  outline: none;
   appearance: none;
-  border: none;
-  color: var(--highlighted);
-  font-size: 2vh;
   padding-right: 5px;
   padding-left: 2px;
   background-image: url(../Resources/drop_Down_Arrow.svg);
-  background-repeat: no-repeat;
+
   background-position: right;
+}
+
+select,
+.current_Day {
+  background-repeat: no-repeat;
 }
 
 section select {
@@ -334,20 +418,22 @@ section select {
 }
 select img {
   width: 7px;
+}
+
+select img,
+.progress_bar,
+.progress {
   height: 4px;
 }
 select:hover {
   font-weight: bolder;
 }
 .progress_bar {
-  width: 100%;
-  height: 4px;
   margin: 10px 0px 20px;
   background-color: #f5f3f3;
 }
 
 .progress {
-  height: 4px;
   width: 80%;
   background-color: rgb(51, 194, 96);
 }
@@ -357,16 +443,7 @@ select:hover {
 }
 
 li {
-  display: flex;
-  flex-direction: column;
   list-style: none;
-  text-align: center;
-}
-
-li:hover {
-  color: var(--highlighted);
-  font-weight: 550;
-  transition: 0.5s;
 }
 
 li span {
@@ -375,107 +452,15 @@ li span {
 }
 
 .current_Day {
-  position: relative;
-  text-align: center;
-  color: white;
   background-image: url("../Resources/date_23rd_Ellipse.svg");
-  background-repeat: no-repeat;
   padding-bottom: 4px;
   padding-left: 5px;
   height: 30px;
   width: 30px;
   margin-top: 16px;
-}
-
-.card_Heading,
-.status {
-  display: flex;
-  justify-content: space-between;
-}
-
-select {
-  outline: none;
-  appearance: none;
-  border: none;
-  color: var(--highlighted);
-  font-size: 2vh;
-  padding-right: 5px;
-  padding-left: 2px;
-  background-image: url(../Resources/drop_Down_Arrow.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-section select {
-  padding-right: 10px;
-}
-select img {
-  width: 7px;
-  height: 4px;
-}
-select:hover {
-  font-weight: bolder;
-}
-.progress_bar {
-  width: 100%;
-  height: 4px;
-  margin: 10px 0px 20px;
-  background-color: #f5f3f3;
-}
-
-.progress {
-  height: 4px;
-  width: 80%;
-  background-color: rgb(51, 194, 96);
-}
-.progress_bar,
-.progress {
-  border-radius: 10px;
-}
-
-li {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  text-align: center;
-}
-
-li:hover {
-  color: var(--highlighted);
-  font-weight: 550;
-  transition: 0.5s;
-}
-
-li span {
-  margin: 20px 0;
-  margin-left: 4px;
-}
-
-.current_Day {
-  position: relative;
-  text-align: center;
-  color: white;
-  background-image: url("../Resources/date_23rd_Ellipse.svg");
-  background-repeat: no-repeat;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  height: 30px;
-  width: 30px;
-  margin-top: 16px;
-}
-
-.card_Heading,
-.status {
-  display: flex;
-  justify-content: space-between;
 }
 
 /*Charts Section */
-
-.tasks_Container,
-.chart_Container {
-  width: 100%;
-}
 
 .chart {
   width: 24vw;
@@ -485,13 +470,6 @@ li span {
 .tasks_Chart {
   width: 23.75vw;
   padding: 2vw;
-}
-
-.search_field,
-.header,
-.calender_Content span,
-.content span {
-  justify-content: space-between;
 }
 
 section,
@@ -530,49 +508,30 @@ span img {
   color: #c2cfe0;
 }
 
-.icon:hover,
-.nav a:hover,
-.setting a:hover,
-.setting button:hover,
-.extend_Btn h4:hover {
-  color: var(--highlighted);
-  transition: 0.5s;
-}
-
 section .text {
   padding-right: 20px;
 }
 
 .header {
   padding: 0 20px 10px;
-  width: 100%;
 }
 
 .calender_Content .header {
   padding: 0 0 10px;
 }
 
-section,
-.card {
-  border-radius: 5px;
-}
-
 .tasks_container {
   height: 40vh;
-
-  width: 100%;
 }
 
 section span {
   padding: 5px 0px;
 }
 
-.tasks_Container span,
-.chart_Container span {
-  font-size: 1.5vh;
-}
-
-.chart_Container span {
+.chart_Container span,
+.main_Content,
+section,
+.top_Chart_Container {
   padding: 20px;
 }
 
@@ -606,6 +565,18 @@ section span {
   body,
   .container {
     display: block;
+  }
+
+  html,
+  body,
+  .container,
+  .calender_Content,
+  .main_Content,
+  section,
+  .top_Chart_Container,
+  .chart,
+  .tasks_Chart,
+  .header {
     width: 100%;
   }
   .sidebar,
@@ -621,8 +592,7 @@ section span {
   .main_Content,
   section,
   .top_Chart_Container {
-    margin: 0px;
-    width: 100%;
+    margin: 0;
   }
 
   section .header {
@@ -631,18 +601,7 @@ section span {
 
   section,
   .top_Chart_Container {
-    padding: 20px;
     box-shadow: none;
-  }
-
-  .chart,
-  .tasks_Chart,
-  .header {
-    width: 100%;
-  }
-
-  .content svg {
-    width: 14px;
   }
 
   p,
