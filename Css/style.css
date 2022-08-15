@@ -192,8 +192,8 @@ section,
 
 .container {
   display: grid;
-  grid-template-columns: 20vw repeat(2, 1fr);
-  grid-template-rows: 12vh repeat(2, 1fr);
+  grid-template-columns: min-content repeat(2, 1fr);
+  grid-template-rows: min-content repeat(2, 1fr);
   column-gap: 2.5vw;
   row-gap: 5.25vh;
   grid-template-areas:
@@ -203,6 +203,8 @@ section,
   
    
   align-items: flex-start;
+  padding-bottom: 5.25vh;
+  padding-right: 2.5vw;
 }
 
 /* Main website sections */
@@ -213,27 +215,23 @@ section,
 }
 .search_field {
   grid-area: search_field;
-  margin-left: -48px;
   padding: 20px 36px;
+  margin-left:-2.5vw;
 }
 
 .main_Content {
   grid-area: main_Content;
-  margin-bottom: 30px;
+  height: 100%;
 }
 
-.top_Chart_Container {
-  grid-area: top_Chart;
-  height: 54vh;
-}
 
 .charts_Container {
   grid-area: charts_Container;
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-right: 2.5vw;
   row-gap: 5.25vh;
+  justify-content: space-between;
 }
 
 /* Search Header */
@@ -324,6 +322,10 @@ li:hover {
 .setting img,
 .content svg {
   width: 14px;
+}
+
+.toggle_Button{
+  padding-bottom:20px ;
 }
 
 /* Main Content */
