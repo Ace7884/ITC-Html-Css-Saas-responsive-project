@@ -147,30 +147,32 @@
           <button class="extend_Btn"><h4>Show more</h4></button>
         </div>
       </div>
-      <section class="top_Chart_Container">
-        <div class = "header">
-          <h4>Deals</h4>
-          <span><p>Show: </p></p><select  name='date_Display' id='date_Display2'><option value="Yearly">Yearly</option><option value="Monthly" selected="Monthly">Monthly</option><option value="Weekly">Weekly</option><option value="Daily">Daily</option></select></span>
-        </div>
-        <div class="chart_Container">
-          <span><img class="elipse" src="./Resources/deals_chart_Ellipse.svg" alt="closed deals">Closed deals</span>
-          <img class="chart" src="./Resources/deals_chart_graphic.svg" alt="Deals chart">
-        </div> 
-      </section>
-      <section>
-        <div class ="header">
-          <h4>Tasks</h4>
-          <span><p>Show: </p><select  name='date_Display' id='date_Display3'><option value="This year">This year</option><option value="This month" selected="selected">This month</option><option value="This week">This week</option><option value="Today">Today</option></select></span>
-        </div>
-        <div class="tasks_Container">
-          <img class="tasks_Chart" src="./Resources/tasks_graphic.svg" alt="tasks chart"> 
-          <div class ="text">
-            <span><img class="elipse" src="./Resources/yellow_elipse.svg" alt="active tasks">Active</span>
-            <span><img class="elipse" src="./Resources/green_elipse.svg" alt="completed tasks">Completed</span>
-            <span><img class="elipse" src="./Resources/red_elipse.svg" alt="finished tasks">Ended</span>
+      <div class =charts_Container>
+        <section class="top_Chart_Container">
+          <div class = "header">
+            <h4>Deals</h4>
+            <span><p>Show: </p></p><select  name='date_Display' id='date_Display2'><option value="Yearly">Yearly</option><option value="Monthly" selected="Monthly">Monthly</option><option value="Weekly">Weekly</option><option value="Daily">Daily</option></select></span>
+          </div>
+          <div class="chart_Container">
+            <span><img class="elipse" src="./Resources/deals_chart_Ellipse.svg" alt="closed deals">Closed deals</span>
+            <img class="chart" src="./Resources/deals_chart_graphic.svg" alt="Deals chart">
           </div> 
-        </div>
-      </section>
+        </section>
+        <section class = bottom_Chart_Container>
+          <div class ="header">
+            <h4>Tasks</h4>
+            <span><p>Show: </p><select  name='date_Display' id='date_Display3'><option value="This year">This year</option><option value="This month" selected="selected">This month</option><option value="This week">This week</option><option value="Today">Today</option></select></span>
+          </div>
+          <div class="tasks_Container">
+            <img class="tasks_Chart" src="./Resources/tasks_graphic.svg" alt="tasks chart"> 
+            <div class ="text">
+              <span><img class="elipse" src="./Resources/yellow_elipse.svg" alt="active tasks">Active</span>
+              <span><img class="elipse" src="./Resources/green_elipse.svg" alt="completed tasks">Completed</span>
+              <span><img class="elipse" src="./Resources/red_elipse.svg" alt="finished tasks">Ended</span>
+            </div> 
+          </div>
+        </section>
+      </div>
     </div>
   </body>
 </html>

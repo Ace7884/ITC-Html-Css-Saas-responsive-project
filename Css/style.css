@@ -166,7 +166,7 @@ input,
 }
 
 h1,
-section .header,
+.charts_Container, .header,
 .nav,
 .search_field {
   border-bottom: solid #ebeff2 1px;
@@ -192,16 +192,16 @@ section,
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4 1fr);
-  grid-template-rows: repeat(5 1fr);
+  grid-template-columns: 20vw repeat(2, 1fr);
+  grid-template-rows: 12vh repeat(2, 1fr);
   column-gap: 38px;
   row-gap: 39px;
   grid-template-areas:
     "sidebar search_field search_field   search_field"
-    "sidebar main_Content  main_Content  top_Chart"
-    "sidebar main_Content  main_Content  top_Chart"
-    "sidebar main_Content  main_Content  section"
-    "sidebar main_Content  main_Content  section";
+    "sidebar main_Content  main_Content  charts_Container"
+    "sidebar main_Content  main_Content  charts_Container";
+  
+   
   align-items: flex-start;
 }
 
@@ -227,11 +227,14 @@ section,
   height: 54vh;
 }
 
-section {
-  grid-area: section;
-  padding-top: 20px;
-  margin-bottom: 50px;
-  margin-right: 3vw;
+.charts_Container {
+  grid-area: charts_Container;
+  display: flex;
+  justify-content: space-between;
+  height: 96%;
+  flex-direction: column;
+  margin-right: 30px;
+  
 }
 
 /* Search Header */
