@@ -194,8 +194,8 @@ section,
   display: grid;
   grid-template-columns: 20vw repeat(2, 1fr);
   grid-template-rows: 12vh repeat(2, 1fr);
-  column-gap: 38px;
-  row-gap: 39px;
+  column-gap: 2.5vw;
+  row-gap: 5.25vh;
   grid-template-areas:
     "sidebar search_field search_field   search_field"
     "sidebar main_Content  main_Content  charts_Container"
@@ -230,11 +230,10 @@ section,
 .charts_Container {
   grid-area: charts_Container;
   display: flex;
-  justify-content: space-between;
-  height: 96%;
   flex-direction: column;
-  margin-right: 30px;
-  
+  height: 100%;
+  margin-right: 2.5vw;
+  row-gap: 5.25vh;
 }
 
 /* Search Header */
